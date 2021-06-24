@@ -9,9 +9,9 @@ services:
   
 addons:
   sonarcloud:
-    organization: "vancharlotte" # the key of the org you chose at step #3
+    organization: "vancharlotte" 
     token:
-      secure : "travis encrypt 19d5e566ab2f60a4ae60be07e28f7a6a259b8476"  # encrypted value of your token
+      secure : "travis encrypt 19d5e566ab2f60a4ae60be07e28f7a6a259b8476"  
 
 
 before_script:
