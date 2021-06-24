@@ -1,9 +1,17 @@
 language: java
 
+dist: xenial
+
 jdk: openjdk8
 
 services:
   - docker
+  
+addons:
+  sonarcloud:
+    organization: "vancharlotte" # the key of the org you chose at step #3
+    token:
+      secure : 76db40c15106a298a51c8499fcf741fff01658fc  # encrypted value of your token
 
 
 before_script:
@@ -14,7 +22,10 @@ before_script:
 script:
   - mvn verify -f src sonar:sonar -P test-business
   - mvn verify -f src sonar:sonar -P test-consumer
+  
+ cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
 
 
-notifications:
-email: false
