@@ -9,7 +9,7 @@ addons:
   sonarcloud:
     organization: "vancharlotte" 
     token:
-      secure : "travis encrypt 19d5e566ab2f60a4ae60be07e28f7a6a259b8476"  
+      secure : "travis encrypt 791155cb746dcaed7e8c2b389f083f3c8718e859"  
 
 
 before_script:
@@ -18,8 +18,8 @@ before_script:
   - cd ../..
 
 script:
-  - mvn verify -f src sonar:sonar -P test-business
-  - mvn verify -f src sonar:sonar -P test-consumer
+  - mvn verify -f src sonar:sonar -P test-business 
+  - mvn verify -f src sonar:sonar -P test-consumer 
   
 
 
