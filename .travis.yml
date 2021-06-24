@@ -1,7 +1,5 @@
 language: java
 
-dist: xenial
-
 jdk: openjdk8
 
 services:
@@ -23,9 +21,6 @@ script:
   - mvn verify -f src sonar:sonar -P test-business
   - mvn verify -f src sonar:sonar -P test-consumer
   
- cache:
-  directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'
+
 
 
