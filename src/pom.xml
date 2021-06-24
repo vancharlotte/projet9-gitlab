@@ -54,12 +54,13 @@
         <log4j.version>2.8.1</log4j.version>
         <spring.version>4.3.7.RELEASE</spring.version>
 
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
         <!-- Sonar -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.login>856de325ea0df9dd76ad57017823ce9ce2bb695a</sonar.login>
         <sonar.language>java</sonar.language>
+        <sonar.projectKey>vancharlotte_projet9-gitlab</sonar.projectKey>
+        <sonar.organization>vancharlotte</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 
     </properties>
