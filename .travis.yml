@@ -8,7 +8,7 @@ services:
 addons:
   sonarcloud:
     organization: "vancharlotte" 
-    token:
+    login:
       secure : "travis encrypt 791155cb746dcaed7e8c2b389f083f3c8718e859"  
 
 
@@ -18,8 +18,9 @@ before_script:
   - cd ../..
 
 script:
-  - mvn verify -f src sonar:sonar -P test-business -Dsonar.login=791155cb746dcaed7e8c2b389f083f3c8718e859
-  - mvn verify -f src sonar:sonar -P test-consumer -Dsonar.login=791155cb746dcaed7e8c2b389f083f3c8718e859
+  - mvn compile -f src
+  - mvn verify -f src sonar:sonar -P test-business 
+  - mvn verify -f src sonar:sonar -P test-consumer 
   
 
 
